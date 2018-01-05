@@ -12,3 +12,6 @@
 
 # ImageBuilder directory
 .Microsoft.DotNet.ImageBuilder
+
+# Ignore Microsoft Update files
+**/*.msu
