@@ -1,6 +1,6 @@
 param(
     [string]$Branch='master',
-    [string]$ImageBuilderImageName='microsoft/dotnet-buildtools-prereqs:image-builder-debian-20180228165057'
+    [string]$ImageBuilderImageName='microsoft/dotnet-buildtools-prereqs:image-builder-debian-20180306162116'
 )
 
 $ErrorActionPreference = 'Stop'

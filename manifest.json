@@ -34,6 +34,28 @@
         },
         {
           "sharedTags": {
+            "4.7.1-3.5": {}
+          },
+          "platforms": [
+            {
+              "dockerfile": "4.7.1-3.5-windowsservercore-ltsc2016/runtime",
+              "os": "windows",
+              "tags": {
+                "4.7.1-3.5-windowsservercore-ltsc2016": {}
+              }
+            },
+            {
+              "dockerfile": "4.7.1-3.5-windowsservercore-1709/runtime",
+              "os": "windows",
+              "osVersion": "1709",
+              "tags": {
+                "4.7.1-3.5-windowsservercore-1709": {}
+              }
+            }
+          ]
+        },
+        {
+          "sharedTags": {
             "4.7": {}
           },
           "platforms": [
@@ -116,25 +138,32 @@
         },
         {
           "sharedTags": {
-            "3.5-20180213": {},
-            "3.5": {}
+            "4.7.1-3.5-20180313": {},
+            "4.7.1-3.5": {},
+            "3.5": {
+              "isUndocumented": true
+            }
           },
           "platforms": [
             {
-              "dockerfile": "3.5-windowsservercore-ltsc2016/build",
+              "dockerfile": "4.7.1-3.5-windowsservercore-ltsc2016/build",
               "os": "windows",
               "tags": {
-                "3.5-20180213-windowsservercore-ltsc2016": {},
-                "3.5-windowsservercore-ltsc2016": {}
+                "4.7.1-3.5-windowsservercore-ltsc2016": {},
+                "3.5-windowsservercore-ltsc2016": {
+                  "isUndocumented": true
+                }
               }
             },
             {
-              "dockerfile": "3.5-windowsservercore-1709/build",
+              "dockerfile": "4.7.1-3.5-windowsservercore-1709/build",
               "os": "windows",
               "osVersion": "1709",
               "tags": {
-                "3.5-20180213-windowsservercore-1709": {},
-                "3.5-windowsservercore-1709": {}
+                "4.7.1-3.5-windowsservercore-1709": {},
+                "3.5-windowsservercore-1709": {
+                  "isUndocumented": true
+                }
               }
             }
           ]
