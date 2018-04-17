@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<DirectedGraph Title="DrivingTest" xmlns="http://schemas.microsoft.com/vs/2009/dgml">  
+   <Nodes>  
+      <Node Id="4.7.1-3.5-sdk-windowsservercore-ltsc2016" Label="4.7.1-3.5-sdk-windowsservercore-ltsc2016" Category="RS1Image"/>  
+      <Node Id="4.7.1-3.5-windowsservercore-ltsc2016" Label="4.7.1-3.5-windowsservercore-ltsc2016" Category="RS1Image" /> 
+      <Node Id="4.7.1-sdk-windowsservercore-ltsc2016" Label="4.7.1-sdk-windowsservercore-ltsc2016" Category="RS1Image"/>  
+      <Node Id="4.7.1-windowsservercore-ltsc2016" Label="4.7.1-windowsservercore-ltsc2016" Category="RS1Image" />  
+      <Node Id="4.7-windowsservercore-ltsc2016" Label="4.7-windowsservercore-ltsc2016" Category="RS1Image" /> 
+      <Node Id="4.6.2-windowsservercore-ltsc2016" Label="4.6.2-windowsservercore-ltsc2016" Category="RS1Image" /> 
+      <Node Id="3.5-windowsservercore-ltsc2016" Label="3.5-windowsservercore-ltsc2016" Category="RS1Image" /> 
+
+      <Node Id="4.7.1-3.5-sdk-windowsservercore-1709" Label="4.7.1-3.5-sdk-windowsservercore-1709" Category="RS3Image"/>  
+      <Node Id="4.7.1-3.5-windowsservercore-1709" Label="4.7.1-3.5-windowsservercore-1709" Category="RS3Image" />  
+      <Node Id="4.7.1-sdk-windowsservercore-1709" Label="4.7.1-sdk-windowsservercore-1709" Category="RS3Image"/>  
+      <Node Id="4.7.1-windowsservercore-1709" Label="4.7.1-windowsservercore-1709" Category="RS3Image" />  
+
+
+      <Node Id="4.7.1-3.5/4.7.1-3.5-sdk/ltsc2016" Label="4.7.1-3.5/4.7.1-3.5-sdk/ltsc2016" Category="Test" />  
+      <Node Id="4.7.1/4.7.1-sdk/ltsc2016" Label="4.7.1/4.7.1-sdk/ltsc2016" Category="Test" />  
+      <Node Id="4.7/4.7.1-sdk/ltsc2016" Label="4.7/4.7.1-sdk/ltsc2016" Category="Test" />  
+      <Node Id="4.6/4.7.1-sdk/ltsc2016" Label="4.6/4.7.1-sdk/ltsc2016" Category="Test" />  
+      <Node Id="3.5/4.7.1-3.5-sdk/ltsc2016" Label="3.5/4.7.1-3.5-sdk/ltsc2016" Category="Test" />  
+
+      <Node Id="4.7.1-3.5/4.7.1-3.5-sdk/1709" Label="4.7.1-3.5/4.7.1-3.5-sdk/1709" Category="Test" />  
+      <Node Id="4.7.1/4.7.1-sdk/1709" Label="4.7.1/4.7.1-sdk/1709" Category="Test" />  
+   </Nodes>  
+   <Links>  
+      <Link Source="4.7.1-3.5-sdk-windowsservercore-1709" Target="4.7.1-3.5-windowsservercore-1709" Category="BaseImage" />  
+      <Link Source="4.7.1-sdk-windowsservercore-1709" Target="4.7.1-windowsservercore-1709" Category="BaseImage" />  
+      <Link Source="4.7.1-sdk-windowsservercore-ltsc2016" Target="4.7.1-windowsservercore-ltsc2016" Category="BaseImage" />  
+      <Link Source="4.7.1-3.5-sdk-windowsservercore-ltsc2016" Target="4.7.1-3.5-windowsservercore-ltsc2016" Category="BaseImage" />  
+      <Link Source="4.7.1-3.5-windowsservercore-ltsc2016" Target="4.7.1-windowsservercore-ltsc2016" Category="BaseImage" />  
+
+      <Link Source="4.7.1-3.5/4.7.1-3.5-sdk/ltsc2016" Target="4.7.1-3.5-windowsservercore-ltsc2016" Category="TestDependency" />  
+      <Link Source="4.7.1-3.5/4.7.1-3.5-sdk/ltsc2016" Target="4.7.1-3.5-sdk-windowsservercore-ltsc2016" Category="TestDependency" />  
+      <Link Source="4.7.1/4.7.1-sdk/ltsc2016" Target="4.7.1-windowsservercore-ltsc2016" Category="TestDependency" />  
+      <Link Source="4.7.1/4.7.1-sdk/ltsc2016" Target="4.7.1-sdk-windowsservercore-ltsc2016" Category="TestDependency" />  
+      <Link Source="4.7/4.7.1-sdk/ltsc2016" Target="4.7-windowsservercore-ltsc2016" Category="TestDependency" />  
+      <Link Source="4.7/4.7.1-sdk/ltsc2016" Target="4.7.1-sdk-windowsservercore-ltsc2016" Category="TestDependency" />  
+      <Link Source="4.6/4.7.1-sdk/ltsc2016" Target="4.6.2-windowsservercore-ltsc2016" Category="TestDependency" />  
+      <Link Source="4.6/4.7.1-sdk/ltsc2016" Target="4.7.1-sdk-windowsservercore-ltsc2016" Category="TestDependency" />  
+      <Link Source="3.5/4.7.1-3.5-sdk/ltsc2016" Target="3.5-windowsservercore-ltsc2016" Category="TestDependency" />  
+      <Link Source="3.5/4.7.1-3.5-sdk/ltsc2016" Target="4.7.1-3.5-sdk-windowsservercore-ltsc2016" Category="TestDependency" />  
+
+      <Link Source="4.7.1-3.5/4.7.1-3.5-sdk/1709" Target="4.7.1-3.5-windowsservercore-1709" Category="TestDependency" />  
+      <Link Source="4.7.1-3.5/4.7.1-3.5-sdk/1709" Target="4.7.1-3.5-sdk-windowsservercore-1709" Category="TestDependency" />  
+      <Link Source="4.7.1/4.7.1-sdk/1709" Target="4.7.1-windowsservercore-1709" Category="TestDependency" />  
+      <Link Source="4.7.1/4.7.1-sdk/1709" Target="4.7.1-sdk-windowsservercore-1709" Category="TestDependency" />  
+   </Links>  
+   <Categories>  
+      <Category Id="RS1Image" Background="LightBlue" />  
+      <Category Id="RS3Image" Background="Blue" />
+      <Category Id="Test" Background="Green"/>  
+      <Category Id="TestDependency" Stroke="Orange"/>
+      <Category Id="BaseImage" Stroke="Magenta"/>  
+   </Categories>  
+</DirectedGraph> 
