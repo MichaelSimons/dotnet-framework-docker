@@ -1,0 +1,4 @@
+phases:
+  - phase: build
+    steps:
+    - script: echo hello
