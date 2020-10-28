@@ -8,6 +8,9 @@
     "AspnetReleaseDateStamp": "20201110",
     "WcfReleaseDateStamp": "20201110"
   },
+  "includes": [
+    "manifest.versions.json"
+  ],
   "repos": [
     {
       "id": "runtime",
@@ -298,6 +301,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/sdk/4.8/windowsservercore-ltsc2016",
+              "dockerfileTemplate": "eng/dockerfile-templates/sdk/Dockerfile.ltsc2016",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2016",
               "tags": {
@@ -310,6 +314,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/sdk/4.8/windowsservercore-ltsc2019",
+              "dockerfileTemplate": "eng/dockerfile-templates/sdk/Dockerfile",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2019",
               "tags": {
@@ -322,6 +327,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/sdk/4.8/windowsservercore-1903",
+              "dockerfileTemplate": "eng/dockerfile-templates/sdk/Dockerfile",
               "os": "windows",
               "osVersion": "windowsservercore-1903",
               "tags": {
@@ -334,6 +340,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/sdk/4.8/windowsservercore-1909",
+              "dockerfileTemplate": "eng/dockerfile-templates/sdk/Dockerfile",
               "os": "windows",
               "osVersion": "windowsservercore-1909",
               "tags": {
@@ -346,6 +353,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/sdk/4.8/windowsservercore-2004",
+              "dockerfileTemplate": "eng/dockerfile-templates/sdk/Dockerfile",
               "os": "windows",
               "osVersion": "windowsservercore-2004",
               "tags": {
@@ -358,6 +366,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/sdk/4.8/windowsservercore-2009",
+              "dockerfileTemplate": "eng/dockerfile-templates/sdk/Dockerfile",
               "os": "windows",
               "osVersion": "windowsservercore-2009",
               "tags": {
@@ -381,6 +390,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/sdk/3.5/windowsservercore-ltsc2016",
+              "dockerfileTemplate": "eng/dockerfile-templates/sdk/Dockerfile.ltsc2016",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2016",
               "tags": {
@@ -393,6 +403,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/sdk/3.5/windowsservercore-ltsc2019",
+              "dockerfileTemplate": "eng/dockerfile-templates/sdk/Dockerfile",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2019",
               "tags": {
@@ -405,6 +416,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/sdk/3.5/windowsservercore-1903",
+              "dockerfileTemplate": "eng/dockerfile-templates/sdk/Dockerfile",
               "os": "windows",
               "osVersion": "windowsservercore-1903",
               "tags": {
@@ -417,6 +429,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/sdk/3.5/windowsservercore-1909",
+              "dockerfileTemplate": "eng/dockerfile-templates/sdk/Dockerfile",
               "os": "windows",
               "osVersion": "windowsservercore-1909",
               "tags": {
@@ -429,6 +442,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/sdk/3.5/windowsservercore-2004",
+              "dockerfileTemplate": "eng/dockerfile-templates/sdk/Dockerfile",
               "os": "windows",
               "osVersion": "windowsservercore-2004",
               "tags": {
@@ -447,6 +461,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/sdk/3.5/windowsservercore-2009",
+              "dockerfileTemplate": "eng/dockerfile-templates/sdk/Dockerfile",
               "os": "windows",
               "osVersion": "windowsservercore-2009",
               "tags": {
@@ -477,6 +492,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/4.8/windowsservercore-ltsc2016",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2016",
               "tags": {
@@ -489,6 +505,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/4.8/windowsservercore-ltsc2019",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2019",
               "tags": {
@@ -501,6 +518,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/4.8/windowsservercore-1903",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-1903",
               "tags": {
@@ -513,6 +531,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/4.8/windowsservercore-1909",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-1909",
               "tags": {
@@ -525,6 +544,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/4.8/windowsservercore-2004",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-2004",
               "tags": {
@@ -537,6 +557,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/4.8/windowsservercore-2009",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile",
               "os": "windows",
               "osVersion": "windowsservercore-2009",
               "tags": {
@@ -557,6 +578,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/4.7.2/windowsservercore-ltsc2016",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2016",
               "tags": {
@@ -569,6 +591,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/4.7.2/windowsservercore-ltsc2019",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2019",
               "tags": {
@@ -589,6 +612,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/4.7.1/windowsservercore-ltsc2016",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2016",
               "tags": {
@@ -609,6 +633,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/4.7/windowsservercore-ltsc2016",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2016",
               "tags": {
@@ -629,6 +654,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/4.6.2/windowsservercore-ltsc2016",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2016",
               "tags": {
@@ -652,6 +678,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/3.5/windowsservercore-ltsc2016",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile.3.5.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2016",
               "tags": {
@@ -664,6 +691,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/3.5/windowsservercore-ltsc2019",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile.3.5.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2019",
               "tags": {
@@ -676,6 +704,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/3.5/windowsservercore-1903",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile.3.5.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-1903",
               "tags": {
@@ -688,6 +717,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/3.5/windowsservercore-1909",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile.3.5.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-1909",
               "tags": {
@@ -700,6 +730,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/3.5/windowsservercore-2004",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile.3.5.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-2004",
               "tags": {
@@ -718,6 +749,7 @@
                 "REPO": "$(Repo:runtime)"
               },
               "dockerfile": "src/aspnet/3.5/windowsservercore-2009",
+              "dockerfileTemplate": "eng/dockerfile-templates/aspnet/Dockerfile",
               "os": "windows",
               "osVersion": "windowsservercore-2009",
               "tags": {
@@ -748,6 +780,7 @@
                 "REPO": "$(Repo:aspnet)"
               },
               "dockerfile": "src/wcf/4.8/windowsservercore-ltsc2016",
+              "dockerfileTemplate": "eng/dockerfile-templates/wcf/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2016",
               "tags": {
@@ -760,6 +793,7 @@
                 "REPO": "$(Repo:aspnet)"
               },
               "dockerfile": "src/wcf/4.8/windowsservercore-ltsc2019",
+              "dockerfileTemplate": "eng/dockerfile-templates/wcf/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2019",
               "tags": {
@@ -772,6 +806,7 @@
                 "REPO": "$(Repo:aspnet)"
               },
               "dockerfile": "src/wcf/4.8/windowsservercore-1903",
+              "dockerfileTemplate": "eng/dockerfile-templates/wcf/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-1903",
               "tags": {
@@ -784,6 +819,7 @@
                 "REPO": "$(Repo:aspnet)"
               },
               "dockerfile": "src/wcf/4.8/windowsservercore-1909",
+              "dockerfileTemplate": "eng/dockerfile-templates/wcf/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-1909",
               "tags": {
@@ -796,6 +832,7 @@
                 "REPO": "$(Repo:aspnet)"
               },
               "dockerfile": "src/wcf/4.8/windowsservercore-2004",
+              "dockerfileTemplate": "eng/dockerfile-templates/wcf/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-2004",
               "tags": {
@@ -808,6 +845,7 @@
                 "REPO": "$(Repo:aspnet)"
               },
               "dockerfile": "src/wcf/4.8/windowsservercore-2009",
+              "dockerfileTemplate": "eng/dockerfile-templates/wcf/Dockerfile",
               "os": "windows",
               "osVersion": "windowsservercore-2009",
               "tags": {
@@ -828,6 +866,7 @@
                 "REPO": "$(Repo:aspnet)"
               },
               "dockerfile": "src/wcf/4.7.2/windowsservercore-ltsc2016",
+              "dockerfileTemplate": "eng/dockerfile-templates/wcf/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2016",
               "tags": {
@@ -840,6 +879,7 @@
                 "REPO": "$(Repo:aspnet)"
               },
               "dockerfile": "src/wcf/4.7.2/windowsservercore-ltsc2019",
+              "dockerfileTemplate": "eng/dockerfile-templates/wcf/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2019",
               "tags": {
@@ -860,6 +900,7 @@
                 "REPO": "$(Repo:aspnet)"
               },
               "dockerfile": "src/wcf/4.7.1/windowsservercore-ltsc2016",
+              "dockerfileTemplate": "eng/dockerfile-templates/wcf/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2016",
               "tags": {
@@ -880,6 +921,7 @@
                 "REPO": "$(Repo:aspnet)"
               },
               "dockerfile": "src/wcf/4.7/windowsservercore-ltsc2016",
+              "dockerfileTemplate": "eng/dockerfile-templates/wcf/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2016",
               "tags": {
@@ -900,6 +942,7 @@
                 "REPO": "$(Repo:aspnet)"
               },
               "dockerfile": "src/wcf/4.6.2/windowsservercore-ltsc2016",
+              "dockerfileTemplate": "eng/dockerfile-templates/wcf/Dockerfile.pre2009",
               "os": "windows",
               "osVersion": "windowsservercore-ltsc2016",
               "tags": {

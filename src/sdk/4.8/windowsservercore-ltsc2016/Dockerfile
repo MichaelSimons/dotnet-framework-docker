@@ -31,7 +31,6 @@ RUN `
     # Install VS Build Tools
     && powershell -Command `
         $ProgressPreference = 'SilentlyContinue'; `
-        [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; `
         Invoke-WebRequest `
             -UseBasicParsing `
             -Uri https://download.visualstudio.microsoft.com/download/pr/5f914955-f6c7-4add-8e47-2e090bdc02fa/bc60b587587d10eacc50fe99a6f3d57a81749cb55c904225892d1d165f01a913/vs_BuildTools.exe `

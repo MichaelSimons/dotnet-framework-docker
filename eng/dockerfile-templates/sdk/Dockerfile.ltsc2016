@@ -1,8 +1,8 @@
 # escape=`
 
 ARG REPO=mcr.microsoft.com/dotnet/framework/runtime
-FROM $REPO:3.5-windowsservercore-ltsc2016
-
+FROM $REPO:{{PRODUCT_VERSION}}-windowsservercore-ltsc2016
+{{if PRODUCT_VERSION = "3.5":
 # Install .NET 4.8 Fx
 RUN powershell -Command `
         $ProgressPreference = 'SilentlyContinue'; `
@@ -19,7 +19,7 @@ RUN powershell -Command `
 RUN \Windows\Microsoft.NET\Framework64\v2.0.50727\ngen uninstall "Microsoft.Tpm.Commands, Version=10.0.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=amd64" `
     && \Windows\Microsoft.NET\Framework64\v4.0.30319\ngen update `
     && \Windows\Microsoft.NET\Framework\v4.0.30319\ngen update
-
+}}
 # Install NuGet CLI
 ENV NUGET_VERSION 4.9.4
 RUN mkdir "%ProgramFiles%\NuGet" `
@@ -39,7 +39,7 @@ RUN `
         [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; `
         Invoke-WebRequest `
             -UseBasicParsing `
-            -Uri https://download.visualstudio.microsoft.com/download/pr/5f914955-f6c7-4add-8e47-2e090bdc02fa/8fd51571a9aff13c4381037ccb7559a3bb3e6527cbacf4816068e711dfe824f4/vs_TestAgent.exe `
+            -Uri {{VARIABLES["vs|testAgentUrl"]}} `
             -OutFile vs_TestAgent.exe `
     && start /w vs_TestAgent.exe --quiet --norestart --nocache --wait `
     && powershell -Command "if ($err = dir $Env:TEMP -Filter dd_setup_*_errors.log | where Length -gt 0 | Get-Content) { throw $err }" `
@@ -50,16 +50,16 @@ RUN `
         $ProgressPreference = 'SilentlyContinue'; `
         Invoke-WebRequest `
             -UseBasicParsing `
-            -Uri https://download.visualstudio.microsoft.com/download/pr/5f914955-f6c7-4add-8e47-2e090bdc02fa/bc60b587587d10eacc50fe99a6f3d57a81749cb55c904225892d1d165f01a913/vs_BuildTools.exe `
+            -Uri {{VARIABLES["vs|buildToolsUrl"]}} `
             -OutFile vs_BuildTools.exe `
     # Installer won't detect DOTNET_SKIP_FIRST_TIME_EXPERIENCE if ENV is used, must use setx /M
     && setx /M DOTNET_SKIP_FIRST_TIME_EXPERIENCE 1 `
-    && start /w vs_BuildTools.exe ^ `
-        --add Microsoft.VisualStudio.Workload.MSBuildTools ^ `
-        --add Microsoft.VisualStudio.Workload.NetCoreBuildTools ^ `
-        --add Microsoft.Net.Component.4.8.SDK ^ `
-        --add Microsoft.Component.ClickOnce.MSBuild ^ `
-        --add Microsoft.VisualStudio.Component.WebDeploy ^ `
+    && start /w vs_BuildTools.exe @^ `
+        --add Microsoft.VisualStudio.Workload.MSBuildTools @^ `
+        --add Microsoft.VisualStudio.Workload.NetCoreBuildTools @^ `
+        --add Microsoft.Net.Component.4.8.SDK @^ `
+        --add Microsoft.Component.ClickOnce.MSBuild @^ `
+        --add Microsoft.VisualStudio.Component.WebDeploy @^ `
         --quiet --norestart --nocache --wait `
     && powershell -Command "if ($err = dir $Env:TEMP -Filter dd_setup_*_errors.log | where Length -gt 0 | Get-Content) { throw $err }" `
     && del vs_BuildTools.exe `
@@ -77,7 +77,7 @@ RUN powershell -Command `
         [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; `
         Invoke-WebRequest `
             -UseBasicParsing `
-            -Uri https://dotnetbinaries.blob.core.windows.net/dockerassets/MSBuild.Microsoft.VisualStudio.Web.targets.2020.11.zip `
+            -Uri {{VARIABLES["vs|webTargetsUrl"]}} `
             -OutFile MSBuild.Microsoft.VisualStudio.Web.targets.zip; `
         Expand-Archive MSBuild.Microsoft.VisualStudio.Web.targets.zip -DestinationPath \"${Env:ProgramFiles(x86)}\Microsoft Visual Studio\2019\BuildTools\MSBuild\Microsoft\VisualStudio\v16.0\" `
     && del MSBuild.Microsoft.VisualStudio.Web.targets.zip
@@ -106,7 +106,7 @@ RUN powershell " `
     $ErrorActionPreference = 'Stop'; `
     $ProgressPreference = 'SilentlyContinue'; `
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; `
-    @('4.0', '4.5.2', '4.6.2', '4.7.2', '4.8') `
+    @@('4.0', '4.5.2', '4.6.2', '4.7.2', '4.8') `
     | %{ `
         Invoke-WebRequest `
             -UseBasicParsing `
