@@ -1,5 +1,7 @@
-## .NET Framework Runtime
+# .NET Framework Runtime
+
 ## Featured tags
+
 * `4.8.1`
   * `docker pull mcr.microsoft.com/dotnet/framework/runtime:4.8.1`
 * `4.8`
@@ -15,7 +17,7 @@ Watch [discussions](https://github.com/microsoft/dotnet-framework-docker/discuss
 
 ## Usage
 
--The [.NET Framework Docker samples](https://github.com/microsoft/dotnet-framework-docker/blob/main/samples/README.md) show various ways to use .NET Framework and Docker together.
+The [.NET Framework Docker samples](https://github.com/microsoft/dotnet-framework-docker/blob/main/samples/README.md) show various ways to use .NET Framework and Docker together.
 
 ### Container sample: Run a simple application
 
