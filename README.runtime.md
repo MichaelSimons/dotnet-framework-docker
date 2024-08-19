@@ -30,7 +30,7 @@ docker run --rm mcr.microsoft.com/dotnet/framework/samples:dotnetapp
 ```
 
 ### Version Compatibility
-
+@s
 Version Tag | OS Version | Supported .NET Versions
 -- | -- | --
 4.8.1 | windowsservercore-ltsc2022 | 4.8.1
